@@ -286,4 +286,33 @@
         mk("Start over", false, function () { P.clear(); DONE.physics = 0; DONE.fbd = 0; STREAK = 0; meta = {}; bar.remove(); });
         var holder = document.createElement("div"); holder.style.cssText = "position:relative;width:100%;height:0"; holder.appendChild(bar); el("choose").appendChild(holder);
       }
+    })();</script><script>(function mgFit40() {
+      var ch = document.getElementById("choose");
+      if (!ch || !window.IntersectionObserver) return;
+      var probe = document.createElement("div");
+      probe.style.cssText = "position:fixed;left:0;top:0;width:2px;height:100vh;opacity:0;pointer-events:none";
+      document.body.appendChild(probe);
+      function group() {
+        return Array.prototype.filter.call(ch.children, function (e) { return e.tagName !== "CANVAS" && e.getBoundingClientRect().height > 0; })
+          .map(function (e) { return e.getBoundingClientRect(); });
+      }
+      function place(vis) {
+        var k = group(); if (!k.length) return;
+        var top = Math.min.apply(null, k.map(function (r) { return r.top; })), bot = Math.max.apply(null, k.map(function (r) { return r.bottom; }));
+        var c0 = (top + bot) / 2, target = vis.top + 0.4 * vis.height;
+        var pb = parseFloat(getComputedStyle(ch).paddingBottom) || 24;
+        var npb = Math.max(24, pb + 2 * (c0 - target));
+        if (Math.abs(npb - pb) > 1) ch.style.paddingBottom = npb + "px";
+      }
+      function measure() {
+        var io = new IntersectionObserver(function (es) {
+          io.disconnect();
+          var r = es[es.length - 1].intersectionRect;
+          if (r && r.height > 0) place({ top: r.top, height: r.height });
+        });
+        io.observe(probe);
+      }
+      var tm = null;
+      window.addEventListener("resize", function () { clearTimeout(tm); tm = setTimeout(function () { ch.style.paddingBottom = ""; setTimeout(measure, 30); }, 150); });
+      measure();
     })();</script></body></html>
