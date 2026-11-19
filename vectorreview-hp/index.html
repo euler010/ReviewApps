@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honors Physics Vector Review - Vector Addition Practice</title>
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Numbers: Inter with fixed-width (tabular) digits so values and equations line up */
+        .font-num {
+            font-variant-numeric: tabular-nums;
+        }
+        /* Custom scrollbars */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        /* Suppress numeric spin arrows */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+    </style>
+    <!-- Utility stylesheet: a static, self-contained replacement for the Tailwind CDN script.
+         Same class names and values as Tailwind v3.4; Shared by the AP Physics 1 and Honors Physics vector apps; covers every class either app uses, including ones set from JavaScript. -->
+    <style id="utility-styles">
+        *, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
+        ::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }
+        /* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}
+        ::after,::before{--tw-content:''}
+        :host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}
+        body{margin:0;line-height:inherit}
+        hr{height:0;color:inherit;border-top-width:1px}
+        abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}
+        h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}
+        a{color:inherit;text-decoration:inherit}
+        b,strong{font-weight:bolder}
+        code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}
+        small{font-size:80%}
+        sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+        sub{bottom:-.25em}
+        sup{top:-.5em}
+        table{text-indent:0;border-color:inherit;border-collapse:collapse}
+        button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}
+        button,select{text-transform:none}
+        button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}
+        :-moz-focusring{outline:auto}
+        :-moz-ui-invalid{box-shadow:none}
+        progress{vertical-align:baseline}
+        ::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}
+        [type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+        ::-webkit-search-decoration{-webkit-appearance:none}
+        ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+        summary{display:list-item}
+        blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}
+        fieldset{margin:0;padding:0}
+        legend{padding:0}
+        menu,ol,ul{list-style:none;margin:0;padding:0}
+        dialog{padding:0}
+        textarea{resize:vertical}
+        input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}
+        [role=button],button{cursor:pointer}
+        :disabled{cursor:default}
+        audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}
+        img,video{max-width:100%;height:auto}
+        [hidden]:where(:not([hidden=until-found])){display:none}
+        .pointer-events-none{pointer-events:none}
+        .absolute{position:absolute}
+        .relative{position:relative}
+        .sticky{position:sticky}
+        .-bottom-4{bottom:-1rem}
+        .-right-4{right:-1rem}
+        .bottom-2\.5{bottom:0.625rem}
+        .left-2\.5{left:0.625rem}
+        .right-2\.5{right:0.625rem}
+        .right-3{right:0.75rem}
+        .right-3\.5{right:0.875rem}
+        .top-0{top:0px}
+        .top-2\.5{top:0.625rem}
+        .top-20{top:5rem}
+        .z-10{z-index:10}
+        .z-30{z-index:30}
+        .mx-auto{margin-left:auto;margin-right:auto}
+        .my-3{margin-top:0.75rem;margin-bottom:0.75rem}
+        .mb-1{margin-bottom:0.25rem}
+        .mb-1\.5{margin-bottom:0.375rem}
+        .mb-2{margin-bottom:0.5rem}
+        .mb-2\.5{margin-bottom:0.625rem}
+        .mb-3{margin-bottom:0.75rem}
+        .mb-4{margin-bottom:1rem}
+        .mr-1{margin-right:0.25rem}
+        .mt-1{margin-top:0.25rem}
+        .mt-10{margin-top:2.5rem}
+        .mt-2{margin-top:0.5rem}
+        .mt-3{margin-top:0.75rem}
+        .mt-4{margin-top:1rem}
+        .mt-5{margin-top:1.25rem}
+        .mb-0\.5{margin-bottom:0.125rem}
+        .mr-2{margin-right:0.5rem}
+        .mt-0\.5{margin-top:0.125rem}
+        .mt-3\.5{margin-top:0.875rem}
+        .block{display:block}
+        .inline-block{display:inline-block}
+        .flex{display:flex}
+        .inline-flex{display:inline-flex}
+        .grid{display:grid}
+        .hidden{display:none}
+        .aspect-square{aspect-ratio:1 / 1}
+        .h-1{height:0.25rem}
+        .h-2{height:0.5rem}
+        .h-7{height:1.75rem}
+        .h-8{height:2rem}
+        .h-full{height:100%}
+        .min-h-screen{min-height:100vh}
+        .w-2{width:0.5rem}
+        .w-3{width:0.75rem}
+        .w-32{width:8rem}
+        .w-7{width:1.75rem}
+        .w-8{width:2rem}
+        .w-full{width:100%}
+        .min-w-0{min-width:0px}
+        .max-w-2xl{max-width:42rem}
+        .max-w-7xl{max-width:80rem}
+        .flex-1{flex:1 1 0%}
+        .flex-shrink-0{flex-shrink:0}
+        .flex-grow{flex-grow:1}
+        @keyframes ping {
+            75%, 100%{transform:scale(2);opacity:0}
+        }
+        .animate-ping{animation:ping 1s cubic-bezier(0, 0, 0.2, 1) infinite}
+        .cursor-pointer{cursor:pointer}
+        .resize{resize:both}
+        .grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}
+        .flex-col{flex-direction:column}
+        .flex-wrap{flex-wrap:wrap}
+        .items-start{align-items:flex-start}
+        .items-center{align-items:center}
+        .justify-center{justify-content:center}
+        .justify-between{justify-content:space-between}
+        .gap-1{gap:0.25rem}
+        .gap-1\.5{gap:0.375rem}
+        .gap-2{gap:0.5rem}
+        .gap-2\.5{gap:0.625rem}
+        .gap-3{gap:0.75rem}
+        .gap-4{gap:1rem}
+        .gap-6{gap:1.5rem}
+        .space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}
+        .space-x-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.625rem * var(--tw-space-x-reverse));margin-left:calc(0.625rem * calc(1 - var(--tw-space-x-reverse)))}
+        .space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}
+        .space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}
+        .space-y-1\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.375rem * var(--tw-space-y-reverse))}
+        .space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}
+        .space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}
+        .space-y-5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.25rem * var(--tw-space-y-reverse))}
+        .space-y-0\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.125rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.125rem * var(--tw-space-y-reverse))}
+        .space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}
+        .space-y-3\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.875rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.875rem * var(--tw-space-y-reverse))}
+        .overflow-hidden{overflow:hidden}
+        .break-words{overflow-wrap:break-word}
+        .rounded{border-radius:0.25rem}
+        .rounded-2xl{border-radius:1rem}
+        .rounded-full{border-radius:9999px}
+        .rounded-lg{border-radius:0.5rem}
+        .rounded-md{border-radius:0.375rem}
+        .rounded-xl{border-radius:0.75rem}
+        .border{border-width:1px}
+        .border-2{border-width:2px}
+        .border-b{border-bottom-width:1px}
+        .border-t{border-top-width:1px}
+        .border-amber-200{--tw-border-opacity:1;border-color:rgb(253 230 138 / var(--tw-border-opacity, 1))}
+        .border-blue-100{--tw-border-opacity:1;border-color:rgb(219 234 254 / var(--tw-border-opacity, 1))}
+        .border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}
+        .border-blue-900\/50{border-color:rgb(30 58 138 / 0.5)}
+        .border-blue-900\/60{border-color:rgb(30 58 138 / 0.6)}
+        .border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}
+        .border-purple-200{--tw-border-opacity:1;border-color:rgb(233 213 255 / var(--tw-border-opacity, 1))}
+        .border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}
+        .border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}
+        .border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}
+        .border-amber-100{--tw-border-opacity:1;border-color:rgb(254 243 199 / var(--tw-border-opacity, 1))}
+        .border-amber-200\/80{border-color:rgb(253 230 138 / 0.8)}
+        .border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77 / var(--tw-border-opacity, 1))}
+        .border-emerald-300{--tw-border-opacity:1;border-color:rgb(110 231 183 / var(--tw-border-opacity, 1))}
+        .border-emerald-500{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}
+        .border-purple-100{--tw-border-opacity:1;border-color:rgb(243 232 255 / var(--tw-border-opacity, 1))}
+        .border-rose-300{--tw-border-opacity:1;border-color:rgb(253 164 175 / var(--tw-border-opacity, 1))}
+        .border-rose-500{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}
+        .bg-amber-50{--tw-bg-opacity:1;background-color:rgb(255 251 235 / var(--tw-bg-opacity, 1))}
+        .bg-amber-50\/70{background-color:rgb(255 251 235 / 0.7)}
+        .bg-amber-600{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}
+        .bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}
+        .bg-blue-50\/60{background-color:rgb(239 246 255 / 0.6)}
+        .bg-blue-50\/70{background-color:rgb(239 246 255 / 0.7)}
+        .bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}
+        .bg-blue-700{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}
+        .bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}
+        .bg-emerald-500{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}
+        .bg-emerald-700{--tw-bg-opacity:1;background-color:rgb(4 120 87 / var(--tw-bg-opacity, 1))}
+        .bg-purple-50\/70{background-color:rgb(250 245 255 / 0.7)}
+        .bg-purple-600{--tw-bg-opacity:1;background-color:rgb(147 51 234 / var(--tw-bg-opacity, 1))}
+        .bg-purple-700{--tw-bg-opacity:1;background-color:rgb(126 34 206 / var(--tw-bg-opacity, 1))}
+        .bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}
+        .bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}
+        .bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}
+        .bg-slate-950\/80{background-color:rgb(2 6 23 / 0.8)}
+        .bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}
+        .bg-white\/90{background-color:rgb(255 255 255 / 0.9)}
+        .bg-white\/95{background-color:rgb(255 255 255 / 0.95)}
+        .bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}
+        .bg-emerald-50\/70{background-color:rgb(236 253 245 / 0.7)}
+        .bg-rose-50{--tw-bg-opacity:1;background-color:rgb(255 241 242 / var(--tw-bg-opacity, 1))}
+        .bg-rose-50\/70{background-color:rgb(255 241 242 / 0.7)}
+        .bg-transparent{background-color:transparent}
+        .bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}
+        .from-slate-950{--tw-gradient-from:#020617 var(--tw-gradient-from-position);--tw-gradient-to:rgb(2 6 23 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}
+        .via-blue-950{--tw-gradient-to:rgb(23 37 84 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), #172554 var(--tw-gradient-via-position), var(--tw-gradient-to)}
+        .to-slate-900{--tw-gradient-to:#0f172a var(--tw-gradient-to-position)}
+        .p-1{padding:0.25rem}
+        .p-2{padding:0.5rem}
+        .p-2\.5{padding:0.625rem}
+        .p-3{padding:0.75rem}
+        .p-3\.5{padding:0.875rem}
+        .p-4{padding:1rem}
+        .p-5{padding:1.25rem}
+        .px-2{padding-left:0.5rem;padding-right:0.5rem}
+        .px-2\.5{padding-left:0.625rem;padding-right:0.625rem}
+        .px-3{padding-left:0.75rem;padding-right:0.75rem}
+        .px-3\.5{padding-left:0.875rem;padding-right:0.875rem}
+        .px-4{padding-left:1rem;padding-right:1rem}
+        .px-5{padding-left:1.25rem;padding-right:1.25rem}
+        .py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}
+        .py-1{padding-top:0.25rem;padding-bottom:0.25rem}
+        .py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}
+        .py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}
+        .py-4{padding-top:1rem;padding-bottom:1rem}
+        .py-5{padding-top:1.25rem;padding-bottom:1.25rem}
+        .py-2{padding-top:0.5rem;padding-bottom:0.5rem}
+        .pb-3{padding-bottom:0.75rem}
+        .pr-14{padding-right:3.5rem}
+        .pr-8{padding-right:2rem}
+        .pt-2{padding-top:0.5rem}
+        .pt-3{padding-top:0.75rem}
+        .pt-0\.5{padding-top:0.125rem}
+        .pt-1{padding-top:0.25rem}
+        .text-center{text-align:center}
+        .text-7xl{font-size:4.5rem;line-height:1}
+        .text-\[10px\]{font-size:10px}
+        .text-\[11px\]{font-size:11px}
+        .text-base{font-size:1rem;line-height:1.5rem}
+        .text-lg{font-size:1.125rem;line-height:1.75rem}
+        .text-sm{font-size:0.875rem;line-height:1.25rem}
+        .text-xs{font-size:0.75rem;line-height:1rem}
+        .font-bold{font-weight:700}
+        .font-medium{font-weight:500}
+        .font-semibold{font-weight:600}
+        .uppercase{text-transform:uppercase}
+        .italic{font-style:italic}
+        .leading-none{line-height:1}
+        .leading-relaxed{line-height:1.625}
+        .leading-tight{line-height:1.25}
+        .tracking-tight{letter-spacing:-0.025em}
+        .tracking-wider{letter-spacing:0.05em}
+        .text-amber-400{--tw-text-opacity:1;color:rgb(251 191 36 / var(--tw-text-opacity, 1))}
+        .text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}
+        .text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}
+        .text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}
+        .text-blue-200\/80{color:rgb(191 219 254 / 0.8)}
+        .text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}
+        .text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}
+        .text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}
+        .text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}
+        .text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}
+        .text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}
+        .text-emerald-900{--tw-text-opacity:1;color:rgb(6 78 59 / var(--tw-text-opacity, 1))}
+        .text-purple-900{--tw-text-opacity:1;color:rgb(88 28 135 / var(--tw-text-opacity, 1))}
+        .text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}
+        .text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}
+        .text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}
+        .text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}
+        .text-slate-900{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}
+        .text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}
+        .text-amber-600{--tw-text-opacity:1;color:rgb(217 119 6 / var(--tw-text-opacity, 1))}
+        .text-amber-950{--tw-text-opacity:1;color:rgb(69 26 3 / var(--tw-text-opacity, 1))}
+        .text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}
+        .text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}
+        .text-purple-800{--tw-text-opacity:1;color:rgb(107 33 168 / var(--tw-text-opacity, 1))}
+        .text-rose-600{--tw-text-opacity:1;color:rgb(225 29 72 / var(--tw-text-opacity, 1))}
+        .text-rose-700{--tw-text-opacity:1;color:rgb(190 18 60 / var(--tw-text-opacity, 1))}
+        .text-rose-900{--tw-text-opacity:1;color:rgb(136 19 55 / var(--tw-text-opacity, 1))}
+        .opacity-10{opacity:0.1}
+        .shadow{--tw-shadow:0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .shadow-inner{--tw-shadow:inset 0 2px 4px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:inset 0 2px 4px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}
+        .transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}
+        .transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}
+        .duration-200{transition-duration:200ms}
+        .duration-300{transition-duration:300ms}
+        .selection\:bg-blue-600 *::selection{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}
+        .selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}
+        .selection\:bg-blue-600::selection{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}
+        .selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}
+        .hover\:border-blue-600:hover{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}
+        .hover\:bg-blue-600:hover{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}
+        .hover\:bg-blue-800:hover{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}
+        .hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}
+        .hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}
+        .hover\:bg-amber-700:hover{--tw-bg-opacity:1;background-color:rgb(180 83 9 / var(--tw-bg-opacity, 1))}
+        .hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}
+        .hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}
+        .hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}
+        .hover\:shadow-blue-200:hover{--tw-shadow-color:#bfdbfe;--tw-shadow:var(--tw-shadow-colored)}
+        .focus\:border-blue-600:focus{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}
+        .focus\:border-emerald-500:focus{--tw-border-opacity:1;border-color:rgb(16 185 129 / var(--tw-border-opacity, 1))}
+        .focus\:border-rose-500:focus{--tw-border-opacity:1;border-color:rgb(244 63 94 / var(--tw-border-opacity, 1))}
+        .focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}
+        .focus\:ring-blue-600:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(37 99 235 / var(--tw-ring-opacity, 1))}
+        .focus\:ring-emerald-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(16 185 129 / var(--tw-ring-opacity, 1))}
+        .focus\:ring-rose-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(244 63 94 / var(--tw-ring-opacity, 1))}
+        .active\:bg-blue-800:active{--tw-bg-opacity:1;background-color:rgb(30 64 175 / var(--tw-bg-opacity, 1))}
+        .active\:bg-blue-900:active{--tw-bg-opacity:1;background-color:rgb(30 58 138 / var(--tw-bg-opacity, 1))}
+        .active\:bg-slate-200:active{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}
+        .active\:bg-slate-300:active{--tw-bg-opacity:1;background-color:rgb(203 213 225 / var(--tw-bg-opacity, 1))}
+        .active\:bg-amber-800:active{--tw-bg-opacity:1;background-color:rgb(146 64 14 / var(--tw-bg-opacity, 1))}
+        .group:hover .group-hover\:translate-x-1{--tw-translate-x:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}
+        .group:hover .group-hover\:text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}
+        @media (min-width: 640px) {
+            .sm\:block{display:block}
+            .sm\:inline{display:inline}
+            .sm\:hidden{display:none}
+            .sm\:flex-none{flex:none}
+            .sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}
+            .sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}
+            .sm\:flex-row{flex-direction:row}
+            .sm\:space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}
+            .sm\:p-5{padding:1.25rem}
+            .sm\:p-6{padding:1.5rem}
+            .sm\:px-3{padding-left:0.75rem;padding-right:0.75rem}
+            .sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}
+            .sm\:text-base{font-size:1rem;line-height:1.5rem}
+            .sm\:text-lg{font-size:1.125rem;line-height:1.75rem}
+            .sm\:text-sm{font-size:0.875rem;line-height:1.25rem}
+            .sm\:text-xl{font-size:1.25rem;line-height:1.75rem}
+        }
+        @media (min-width: 768px) {
+            .md\:block{display:block}
+        }
+        @media (min-width: 1024px) {
+            .lg\:col-span-5{grid-column:span 5 / span 5}
+            .lg\:col-span-7{grid-column:span 7 / span 7}
+            .lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}
+            .lg\:px-8{padding-left:2rem;padding-right:2rem}
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col selection:bg-blue-600 selection:text-white">
+
+    <header class="bg-slate-900 text-white shadow-md border-b border-blue-900/60 sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex items-center justify-between">
+            <div class="flex items-center space-x-2.5 cursor-pointer" onclick="showMainMenu()">
+                <div class="w-8 h-8 rounded-lg bg-blue-700 flex items-center justify-center text-white shadow-inner font-bold text-base">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm sm:text-base font-bold tracking-tight leading-tight">Honors Physics Vector Review</h1>
+                    <p class="text-[11px] text-blue-200/80 hidden sm:block leading-none">Right Triangle Trigonometry & Vector Addition</p>
+                </div>
+            </div>
+
+            <!-- Stats & Quick Actions -->
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <div class="bg-slate-950/80 px-2.5 py-1 rounded-lg border border-blue-900/50 flex items-center space-x-2 text-xs">
+                    <span class="text-slate-300">Score: <strong id="scoreDisplay" class="text-emerald-400 font-num font-bold">0</strong></span>
+                    <span class="text-slate-600">|</span>
+                    <span class="text-slate-300">Streak: <strong id="streakDisplay" class="text-amber-400 font-num font-bold">0</strong> <i class="fa-solid fa-fire text-amber-400 text-xs"></i></span>
+                </div>
+
+                <button id="menuNavBtn" onclick="showMainMenu()" class="hidden bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-lg transition-all shadow flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-table-cells-large text-xs"></i>
+                    <span class="hidden sm:inline">Return to Menu</span>
+                    <span class="sm:hidden">Menu</span>
+                </button>
+
+                <button id="newProblemBtn" onclick="generateNewProblem()" class="hidden bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white text-xs font-semibold px-2.5 sm:px-3 py-1.5 rounded-lg transition-all shadow flex items-center gap-1.5 cursor-pointer">
+                    <i class="fa-solid fa-arrows-rotate text-xs"></i>
+                    <span>New Problem</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <!-- MAIN MENU SCREEN -->
+        <section id="menuScreen" class="space-y-4">
+            <!-- Hero Banner -->
+            <div class="bg-gradient-to-r from-slate-950 via-blue-950 to-slate-900 rounded-xl p-4 sm:p-5 text-white shadow-sm border border-blue-900/50 relative overflow-hidden">
+                <div class="relative z-10 max-w-2xl">
+                    <h2 class="text-base sm:text-lg font-bold tracking-tight text-white mb-1">
+                        Select a Vector Addition Module
+                    </h2>
+                    <p class="text-xs sm:text-sm text-blue-200/80 leading-relaxed">
+                        Practice resolving coplanar displacement vectors analytically using acute right-triangle trigonometry and component summation. Problems randomly present either <strong>2 or 3 vectors</strong> with instant feedback and step-by-step solutions.
+                    </p>
+                </div>
+                <div class="absolute -right-4 -bottom-4 opacity-10 text-7xl pointer-events-none text-white hidden md:block">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+            </div>
+
+            <!-- Module Selection Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Card 1 -->
+                <div onclick="startQuestion('q1')" class="group bg-white rounded-xl p-4 sm:p-5 border-2 border-slate-200 hover:border-blue-600 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2.5">
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-blue-50 text-blue-800 border border-blue-200">
+                                Question 1
+                            </span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-blue-700 transition">
+                                2 or 3 Vectors • Polar
+                            </span>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-700 transition mb-1.5">
+                            Polar Vector Addition (0° to 360°)
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+                            Displacement vectors (40.0 km to 90.0 km) with angles measured counterclockwise from the positive x-axis. Find the resultant magnitude and standard polar direction.
+                        </p>
+                    </div>
+                    <div class="pt-3 flex items-center justify-between border-t border-slate-100 text-xs sm:text-sm">
+                        <span class="text-slate-600 font-medium">Standard CCW Angle (0° ≤ θ &lt; 360°)</span>
+                        <span class="inline-flex items-center gap-1.5 font-bold text-blue-700 group-hover:translate-x-1 transition">
+                            Start Question 1 <span aria-hidden="true">&rarr;</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div onclick="startQuestion('q2')" class="group bg-white rounded-xl p-4 sm:p-5 border-2 border-slate-200 hover:border-blue-600 shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2.5">
+                            <span class="px-2.5 py-0.5 rounded text-[11px] font-bold uppercase tracking-wider bg-amber-50 text-amber-800 border border-amber-200">
+                                Question 2
+                            </span>
+                            <span class="text-xs font-medium text-slate-600 group-hover:text-blue-700 transition">
+                                2 or 3 Vectors • Cardinal
+                            </span>
+                        </div>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-blue-700 transition mb-1.5">
+                            Cardinal Direction Vector Addition
+                        </h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+                            Displacement vectors (40.0 m to 90.0 m) with acute angles and cardinal bearings. Solved using acute right triangles and directional negative signs.
+                        </p>
+                    </div>
+                    <div class="pt-3 flex items-center justify-between border-t border-slate-100 text-xs sm:text-sm">
+                        <span class="text-slate-600 font-medium">Acute Angle &amp; Cardinal Bearing</span>
+                        <span class="inline-flex items-center gap-1.5 font-bold text-blue-700 group-hover:translate-x-1 transition">
+                            Start Question 2 <span aria-hidden="true">&rarr;</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="practiceScreen" class="hidden">
+            <!-- Navigation Toolbar & Question Selector Tabs -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex items-center gap-2">
+                    <button onclick="showMainMenu()" class="px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition flex items-center gap-1.5 mr-1 border border-slate-300 cursor-pointer">
+                        <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                        <span>Menu</span>
+                    </button>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-slate-600 hidden sm:inline">Module:</span>
+                    <div class="inline-flex flex-wrap rounded-lg bg-slate-100 p-1 border border-slate-200 gap-1" role="group">
+                        <button id="modeQ1" onclick="switchQuestion('q1')" class="px-2.5 py-1 text-xs font-semibold rounded-md bg-white text-blue-800 shadow-sm transition flex items-center gap-1 cursor-pointer">
+                            <i class="fa-solid fa-circle-nodes text-[10px]"></i>
+                            <span>Q1 (Polar Addition)</span>
+                        </button>
+                        <button id="modeQ2" onclick="switchQuestion('q2')" class="px-2.5 py-1 text-xs font-medium rounded-md text-slate-600 hover:text-slate-900 transition flex items-center gap-1 cursor-pointer">
+                            <i class="fa-solid fa-compass text-[10px]"></i>
+                            <span>Q2 (Cardinal Addition)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-3 text-xs text-slate-600">
+                    <span id="vectorCountBadge" class="bg-blue-100 text-blue-900 px-2.5 py-0.5 rounded-full font-bold text-[11px] font-num">2 Vectors</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                        <span class="hidden sm:inline">Randomized on each attempt</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Problem and Visualizer Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+                
+                <!-- Left Column: Problem Definition & Inputs -->
+                <div class="lg:col-span-7 space-y-5">
+                    
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                            <span id="problemBadge" class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-blue-50 text-blue-800 border border-blue-200">
+                                Question 1
+                            </span>
+                            <!-- Two / Three Vectors Selector Buttons -->
+                            <div class="inline-flex rounded-lg bg-slate-100 p-1 border border-slate-200 gap-1" role="group">
+                                <button 
+                                    type="button" 
+                                    id="btnCount2" 
+                                    onclick="setVectorCount(2)" 
+                                    class="px-2.5 sm:px-3 py-1 text-xs font-semibold rounded-md transition flex items-center gap-1.5 cursor-pointer"
+                                >
+                                    <i class="fa-solid fa-arrows-split-up-and-left text-[10px]"></i>
+                                    <span>Two Vectors</span>
+                                </button>
+                                <button 
+                                    type="button" 
+                                    id="btnCount3" 
+                                    onclick="setVectorCount(3)" 
+                                    class="px-2.5 sm:px-3 py-1 text-xs font-semibold rounded-md transition flex items-center gap-1.5 cursor-pointer"
+                                >
+                                    <i class="fa-solid fa-diagram-project text-[10px]"></i>
+                                    <span>Three Vectors</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <h2 id="problemTitle" class="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+                            Resultant Vector Addition (Polar)
+                        </h2>
+                        
+                        <p id="problemContextText" class="text-sm text-slate-600 mb-3">
+                            Consider the coplanar displacement vectors given below:
+                        </p>
+
+                        <!-- Vector Presentation Cards -->
+                        <div id="vectorCardsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-3 my-3">
+                            <!-- Vector A -->
+                            <div class="bg-blue-50/70 border border-blue-200 rounded-xl p-3 flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
+                                    A
+                                </div>
+                                <div class="min-w-0">
+                                    <div class="text-[11px] text-blue-900 font-semibold uppercase tracking-wider">Vector A</div>
+                                    <div id="vecAString" class="text-sm font-num font-bold text-slate-900 break-words">--</div>
+                                </div>
+                            </div>
+
+                            <!-- Vector B -->
+                            <div class="bg-amber-50/70 border border-amber-200 rounded-xl p-3 flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-amber-600 text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
+                                    B
+                                </div>
+                                <div class="min-w-0">
+                                    <div class="text-[11px] text-amber-900 font-semibold uppercase tracking-wider">Vector B</div>
+                                    <div id="vecBString" class="text-sm font-num font-bold text-slate-900 break-words">--</div>
+                                </div>
+                            </div>
+
+                            <!-- Vector C (Rendered conditionally for 3 vectors) -->
+                            <div id="vecCCard" class="hidden bg-purple-50/70 border border-purple-200 rounded-xl p-3 flex items-center space-x-3">
+                                <div class="w-8 h-8 rounded-lg bg-purple-600 text-white flex items-center justify-center font-bold text-sm shadow-sm flex-shrink-0">
+                                    C
+                                </div>
+                                <div class="min-w-0">
+                                    <div class="text-[11px] text-purple-900 font-semibold uppercase tracking-wider">Vector C</div>
+                                    <div id="vecCString" class="text-sm font-num font-bold text-slate-900 break-words">--</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Instructions Prompt -->
+                        <div class="mt-4 p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5 text-xs sm:text-sm text-slate-700">
+                            <div id="operationQuestionTextA"><strong>a.</strong> Find the resultant <b>R</b> = <b>A</b> + <b>B</b>.</div>
+                            <div id="operationQuestionTextB"><strong>b.</strong> Give your angle as a positive angle measured counterclockwise from the positive x-axis (0° ≤ θ &lt; 360°).</div>
+                        </div>
+
+                        <form id="vectorForm" onsubmit="event.preventDefault(); checkAnswer();" class="mt-5 space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <!-- Magnitude Input -->
+                                <div>
+                                    <div class="flex items-center justify-between mb-1">
+                                        <label for="inputMagnitude" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+                                            Part a: Magnitude (|R|)
+                                        </label>
+                                        <span id="magFieldBadge" class="hidden text-xs font-semibold"></span>
+                                    </div>
+                                    <div class="relative flex items-center">
+                                        <input 
+                                            type="number" 
+                                            id="inputMagnitude" 
+                                            step="any"
+                                            placeholder="e.g. 74.8" 
+                                            class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 font-num text-sm text-slate-900 transition pr-14"
+                                            required
+                                        >
+                                        <div class="absolute right-3.5 pointer-events-none text-xs font-bold text-slate-600 font-num">
+                                            <span id="unitMagnitudeDisplay">km</span>
+                                        </div>
+                                    </div>
+                                    <div id="magFieldMsg" class="text-[11px] mt-1 text-slate-600">Tolerance: ±1% of exact value</div>
+                                </div>
+
+                                <!-- Direction Input -->
+                                <div>
+                                    <div class="flex items-center justify-between mb-1">
+                                        <label for="inputAngle" class="block text-xs font-bold text-slate-700 uppercase tracking-wider">
+                                            Part b: Direction (θ)
+                                        </label>
+                                        <span id="dirFieldBadge" class="hidden text-xs font-semibold"></span>
+                                    </div>
+                                    
+                                    <div class="flex items-center gap-2">
+                                        <div class="relative flex items-center flex-1">
+                                            <input 
+                                                type="number" 
+                                                id="inputAngle" 
+                                                step="any"
+                                                placeholder="e.g. 195.4" 
+                                                class="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-300 rounded-xl focus:ring-2 focus:ring-blue-600 focus:border-blue-600 font-num text-sm text-slate-900 transition pr-8"
+                                                required
+                                            >
+                                            <div class="absolute right-3 pointer-events-none text-xs font-bold text-slate-600 font-num">
+                                                °
+                                            </div>
+                                        </div>
+
+                                        <!-- Cardinal Bearing Dropdown -->
+                                        <div id="cardinalSelectContainer" class="w-32 hidden">
+                                            <select 
+                                                id="cardinalSelect"
+                                                class="w-full py-2.5 px-2 bg-slate-50 border border-slate-300 rounded-xl text-xs font-medium text-slate-800 focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition"
+                                            >
+                                                <option value="" disabled selected>Bearing...</option>
+                                                <option value="N of E">N of E</option>
+                                                <option value="E of N">E of N</option>
+                                                <option value="N of W">N of W</option>
+                                                <option value="W of N">W of N</option>
+                                                <option value="S of E">S of E</option>
+                                                <option value="E of S">E of S</option>
+                                                <option value="S of W">S of W</option>
+                                                <option value="W of S">W of S</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div id="dirFieldMsg" class="text-[11px] mt-1 text-slate-600">Tolerance: ±1% of exact value (0° ≤ θ &lt; 360°)</div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="flex flex-wrap items-center gap-2.5 pt-2">
+                                <button 
+                                    type="submit" 
+                                    id="submitBtn"
+                                    class="flex-1 sm:flex-none px-5 py-2.5 bg-blue-700 hover:bg-blue-800 active:bg-blue-900 text-white font-semibold rounded-xl transition shadow hover:shadow-blue-200 flex items-center justify-center gap-2 text-sm cursor-pointer"
+                                >
+                                    <i class="fa-solid fa-circle-check"></i>
+                                    <span>Check Answer</span>
+                                </button>
+
+                                <button 
+                                    type="button" 
+                                    onclick="toggleSolution()"
+                                    id="solutionToggleBtn"
+                                    class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-700 font-medium rounded-xl transition flex items-center justify-center gap-2 text-sm cursor-pointer"
+                                >
+                                    <i class="fa-solid fa-lightbulb text-amber-500"></i>
+                                    <span id="solutionBtnText">Show Solution</span>
+                                </button>
+
+                                <button 
+                                    type="button" 
+                                    onclick="generateNewProblem()"
+                                    class="px-4 py-2.5 bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-700 font-medium rounded-xl transition flex items-center justify-center gap-2 text-sm cursor-pointer"
+                                    title="Randomize vector values"
+                                >
+                                    <i class="fa-solid fa-dice text-blue-600"></i>
+                                    <span>Randomize</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Feedback Box -->
+                        <div id="feedbackBox" class="hidden mt-4 p-4 rounded-xl text-sm transition-all duration-300"></div>
+                    </div>
+
+                    <!-- Step-by-Step Solution Breakdown -->
+                    <div id="solutionCard" class="hidden bg-white rounded-2xl p-5 sm:p-6 border border-slate-200 shadow-sm transition">
+                        <div class="flex items-center justify-between border-b border-slate-100 pb-3 mb-4">
+                            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+                                <i class="fa-solid fa-calculator text-blue-700"></i>
+                                <span>Complete Step-by-Step Analytic Solution</span>
+                            </h3>
+                            <span class="text-xs bg-blue-50 text-blue-800 px-2.5 py-1 rounded-md font-medium border border-blue-200">Component Method</span>
+                        </div>
+
+                        <div class="space-y-4 text-sm text-slate-700" id="solutionContent"></div>
+                    </div>
+
+                </div>
+
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm sticky top-20">
+                        <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-draw-polygon text-blue-700"></i>
+                                <h3 class="font-bold text-slate-900 text-sm sm:text-base">Vector Visualization</h3>
+                            </div>
+                            
+                            <!-- Header Action: Blue Head-to-Tail Button -->
+                            <div id="headToTailContainer" class="hidden items-center">
+                                <button 
+                                    type="button" 
+                                    id="toggleHeadToTailBtn"
+                                    onclick="toggleHeadToTailMode()" 
+                                    title="Toggle between Head-to-Tail and Origin vector views"
+                                    class="px-3 py-1.5 bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white shadow-md rounded-lg text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+                                >
+                                    <i id="headToTailIcon" class="fa-solid fa-route text-white text-xs"></i>
+                                    <span id="headToTailText">Head-to-Tail</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Graphic Container (Always visible with grid; vectors hidden by default) -->
+                        <div id="vectorGraphicContent" class="space-y-3">
+                            <!-- Canvas Container -->
+                            <div class="relative w-full aspect-square bg-white rounded-xl overflow-hidden shadow-sm border-2 border-slate-200">
+                                <canvas id="vectorCanvas" class="w-full h-full block"></canvas>
+
+                                <!-- Grid Overlay "View Vectors" Button -->
+                                <div class="absolute top-2.5 left-2.5 z-10">
+                                    <button 
+                                        type="button" 
+                                        id="canvasViewVectorsBtn"
+                                        onclick="toggleVectorsVisibility()" 
+                                        class="px-3 py-1.5 bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white shadow-md rounded-lg text-xs font-semibold flex items-center gap-1.5 transition cursor-pointer"
+                                    >
+                                        <i id="canvasViewVectorsIcon" class="fa-solid fa-eye text-white"></i>
+                                        <span id="canvasViewVectorsText">View Vectors</span>
+                                    </button>
+                                </div>
+                                
+                                <!-- Legend Overlay -->
+                                <div id="canvasLegend" class="hidden absolute bottom-2.5 left-2.5 bg-white/90 backdrop-blur-sm border border-slate-200 shadow-sm rounded-lg p-2 text-[11px] text-slate-800 flex flex-col gap-1 z-10 pointer-events-none">
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-3 h-1 bg-blue-700 inline-block rounded"></span>
+                                        <span class="font-semibold text-blue-900"><b>A</b> (Vector A)</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <span class="w-3 h-1 bg-amber-600 inline-block rounded"></span>
+                                        <span class="font-semibold text-amber-900"><b>B</b> (Vector B)</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5 hidden" id="legendVecCRow">
+                                        <span class="w-3 h-1 bg-purple-700 inline-block rounded"></span>
+                                        <span class="font-semibold text-purple-900"><b>C</b> (Vector C)</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5" id="legendResultantRow">
+                                        <span class="w-3 h-1 bg-emerald-700 inline-block rounded"></span>
+                                        <span class="font-semibold text-emerald-900" id="legendResultantLabel"><b>R</b> = <b>A</b> + <b>B</b></span>
+                                    </div>
+                                </div>
+
+                                <!-- Canvas Quick Controls Overlay -->
+                                <div class="absolute top-2.5 right-2.5 flex flex-col gap-1 z-10">
+                                    <button 
+                                        type="button" 
+                                        onclick="zoomIn()" 
+                                        title="Zoom In" 
+                                        class="w-7 h-7 bg-white/95 hover:bg-slate-100 active:bg-slate-200 text-slate-700 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center text-xs font-bold transition cursor-pointer"
+                                    >
+                                        <i class="fa-solid fa-plus text-[11px]"></i>
+                                    </button>
+                                    <button 
+                                        type="button" 
+                                        onclick="zoomOut()" 
+                                        title="Zoom Out" 
+                                        class="w-7 h-7 bg-white/95 hover:bg-slate-100 active:bg-slate-200 text-slate-700 rounded-lg border border-slate-200 shadow-sm flex items-center justify-center text-xs font-bold transition cursor-pointer"
+                                    >
+                                        <i class="fa-solid fa-minus text-[11px]"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 mt-10 py-5 text-center text-xs text-slate-600">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-atom text-blue-700"></i>
+                <span class="font-medium">Honors Physics Vector Review</span>
+            </div>
+            <p>© Interactive Physics Tools. Polar angles measured CCW from the +x-axis.</p>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Application State Object
+         */
+        const state = {
+            currentScreen: 'menu',
+            question: 'q1', // 'q1' (Polar) or 'q2' (Cardinal)
+            vectorCount: 2, // 2 or 3 vectors
+            unit: 'km',
+            isHeadToTail: false,
+            vecA: { mag: 0, angle: 0, angleVal: 0, cardinalRef: '', isAxial: false, axialDir: '' },
+            vecB: { mag: 0, angle: 0, angleVal: 0, cardinalRef: '', isAxial: false, axialDir: '' },
+            vecC: { mag: 0, angle: 0, angleVal: 0, cardinalRef: '', isAxial: false, axialDir: '' },
+            resultant: { 
+                mag: 0, 
+                angleCCW: 0, 
+                rx: 0, 
+                ry: 0,
+                cardinalPrimary: { angle: 0, ref: '' },
+                cardinalSecondary: { angle: 0, ref: '' },
+                quadrantInfo: ''
+            },
+            components: {
+                ax: 0, ay: 0,
+                bx: 0, by: 0,
+                cx: 0, cy: 0
+            },
+            fixedGridMaxRange: 160,
+            fixedGridStep: 40,
+            zoomLevel: 1.0,
+            showResultantOnCanvas: false,
+            vectorsVisible: false,
+            score: 0,
+            streak: 0,
+            isSolved: false,
+            showingSolution: false,
+            solutionViewed: false // FIX: set when the solution is opened; no points awarded afterwards
+        };
+
+        const CARDINAL_OPTIONS = [
+            'N of E', 'E of N',
+            'N of W', 'W of N',
+            'S of E', 'E of S',
+            'S of W', 'W of S'
+        ];
+
+        const toRad = deg => (deg * Math.PI) / 180;
+        const toDeg = rad => (rad * 180) / Math.PI;
+
+        function normalizeAngle(deg) {
+            let a = deg % 360;
+            if (a < 0) a += 360;
+            return a;
+        }
+
+        // Navigation controls
+        function showMainMenu() {
+            state.currentScreen = 'menu';
+            document.getElementById('menuScreen').classList.remove('hidden');
+            document.getElementById('practiceScreen').classList.add('hidden');
+            document.getElementById('menuNavBtn').classList.add('hidden');
+            document.getElementById('newProblemBtn').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function startQuestion(qType) {
+            state.currentScreen = 'practice';
+            state.question = qType;
+            document.getElementById('menuScreen').classList.add('hidden');
+            document.getElementById('practiceScreen').classList.remove('hidden');
+            document.getElementById('menuNavBtn').classList.remove('hidden');
+            document.getElementById('newProblemBtn').classList.remove('hidden');
+
+            // Randomly choose 2 or 3 vectors when question loads
+            state.vectorCount = Math.random() < 0.5 ? 2 : 3;
+            generateRandomVectors();
+
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(() => {
+                resizeCanvas();
+            }, 60);
+        }
+
+        function switchQuestion(qType) {
+            state.question = qType;
+            // Randomly choose 2 or 3 vectors when switching modules
+            state.vectorCount = Math.random() < 0.5 ? 2 : 3;
+            generateRandomVectors();
+        }
+
+        function generateNewProblem() {
+            // Randomly choose 2 or 3 vectors on each new problem
+            state.vectorCount = Math.random() < 0.5 ? 2 : 3;
+            generateRandomVectors();
+        }
+
+        function setVectorCount(count) {
+            state.vectorCount = count;
+            generateRandomVectors();
+        }
+
+        // Convert cardinal bearing to counterclockwise polar angle from +x
+        function cardinalToCCW(angleDeg, cardinalRef) {
+            switch (cardinalRef) {
+                case 'N of E': return angleDeg;
+                case 'E of N': return 90 - angleDeg;
+                case 'W of N': return 90 + angleDeg;
+                case 'N of W': return 180 - angleDeg;
+                case 'S of W': return 180 + angleDeg;
+                case 'W of S': return 270 - angleDeg;
+                case 'E of S': return 270 + angleDeg;
+                case 'S of E': return 360 - angleDeg;
+                default: return angleDeg;
+            }
+        }
+
+        function cartesianToCardinals(rx, ry) {
+            const absX = Math.abs(rx);
+            const absY = Math.abs(ry);
+            const angleFromHorizontal = Number(toDeg(Math.atan2(absY, absX)).toFixed(1));
+            const angleFromVertical = Number((90 - angleFromHorizontal).toFixed(1));
+
+            if (rx >= 0 && ry >= 0) {
+                return {
+                    primary: { angle: angleFromHorizontal, ref: 'N of E' },
+                    secondary: { angle: angleFromVertical, ref: 'E of N' },
+                    quadrant: 'Quadrant I (North of East)'
+                };
+            } else if (rx < 0 && ry >= 0) {
+                return {
+                    primary: { angle: angleFromHorizontal, ref: 'N of W' },
+                    secondary: { angle: angleFromVertical, ref: 'W of N' },
+                    quadrant: 'Quadrant II (North of West)'
+                };
+            } else if (rx < 0 && ry < 0) {
+                return {
+                    primary: { angle: angleFromHorizontal, ref: 'S of W' },
+                    secondary: { angle: angleFromVertical, ref: 'W of S' },
+                    quadrant: 'Quadrant III (South of West)'
+                };
+            } else {
+                return {
+                    primary: { angle: angleFromHorizontal, ref: 'S of E' },
+                    secondary: { angle: angleFromVertical, ref: 'E of S' },
+                    quadrant: 'Quadrant IV (South of East)'
+                };
+            }
+        }
+
+        /**
+         * Resolves components using acute right triangles with directional negative signs in front.
+         * For axial vectors (East, North, West, South), returns pure 1D scalar components without trig.
+         */
+        function getAcuteCardinalComponents(mag, acuteAngle, ref, unit, isAxial = false, axialDir = '') {
+            if (isAxial) {
+                let valX = 0, valY = 0;
+                let xExpr = '', yExpr = '';
+                const magStr = mag.toFixed(1);
+                switch (axialDir) {
+                    case 'East':
+                        valX = mag;
+                        valY = 0;
+                        xExpr = `+${magStr}`;
+                        yExpr = `0.0`;
+                        break;
+                    case 'West':
+                        valX = -mag;
+                        valY = 0;
+                        xExpr = `-${magStr}`;
+                        yExpr = `0.0`;
+                        break;
+                    case 'North':
+                        valX = 0;
+                        valY = mag;
+                        xExpr = `0.0`;
+                        yExpr = `+${magStr}`;
+                        break;
+                    case 'South':
+                        valX = 0;
+                        valY = -mag;
+                        xExpr = `0.0`;
+                        yExpr = `-${magStr}`;
+                        break;
+                }
+                return {
+                    valX,
+                    valY,
+                    xExpr,
+                    yExpr,
+                    formattedX: `<strong>${valX.toFixed(2)} ${unit}</strong> (purely ${axialDir})`,
+                    formattedY: `<strong>${valY.toFixed(2)} ${unit}</strong> (purely ${axialDir})`
+                };
+            }
+
+            const thetaRad = toRad(acuteAngle);
+            const cosVal = Math.cos(thetaRad);
+            const sinVal = Math.sin(thetaRad);
+            const magStr = mag.toFixed(1);
+            const angStr = acuteAngle.toFixed(1);
+
+            let valX = 0, valY = 0;
+            let xExpr = '', yExpr = '';
+
+            switch (ref) {
+                case 'N of E': // East (+x, adj=cos), North (+y, opp=sin)
+                    valX = mag * cosVal;
+                    valY = mag * sinVal;
+                    xExpr = `${magStr} · cos(${angStr}°)`;
+                    yExpr = `${magStr} · sin(${angStr}°)`;
+                    break;
+                case 'E of N': // North (+y, adj=cos), East (+x, opp=sin)
+                    valX = mag * sinVal;
+                    valY = mag * cosVal;
+                    xExpr = `${magStr} · sin(${angStr}°)`;
+                    yExpr = `${magStr} · cos(${angStr}°)`;
+                    break;
+                case 'N of W': // West (-x, adj=cos), North (+y, opp=sin)
+                    valX = -mag * cosVal;
+                    valY = mag * sinVal;
+                    xExpr = `-${magStr} · cos(${angStr}°)`;
+                    yExpr = `${magStr} · sin(${angStr}°)`;
+                    break;
+                case 'W of N': // North (+y, adj=cos), West (-x, opp=sin)
+                    valX = -mag * sinVal;
+                    valY = mag * cosVal;
+                    xExpr = `-${magStr} · sin(${angStr}°)`;
+                    yExpr = `${magStr} · cos(${angStr}°)`;
+                    break;
+                case 'S of E': // East (+x, adj=cos), South (-y, opp=sin)
+                    valX = mag * cosVal;
+                    valY = -mag * sinVal;
+                    xExpr = `${magStr} · cos(${angStr}°)`;
+                    yExpr = `-${magStr} · sin(${angStr}°)`;
+                    break;
+                case 'E of S': // South (-y, adj=cos), East (+x, opp=sin)
+                    valX = mag * sinVal;
+                    valY = -mag * cosVal;
+                    xExpr = `${magStr} · sin(${angStr}°)`;
+                    yExpr = `-${magStr} · cos(${angStr}°)`;
+                    break;
+                case 'S of W': // West (-x, adj=cos), South (-y, opp=sin)
+                    valX = -mag * cosVal;
+                    valY = -mag * sinVal;
+                    xExpr = `-${magStr} · cos(${angStr}°)`;
+                    yExpr = `-${magStr} · sin(${angStr}°)`;
+                    break;
+                case 'W of S': // South (-y, adj=cos), West (-x, opp=sin)
+                    valX = -mag * sinVal;
+                    valY = -mag * cosVal;
+                    xExpr = `-${magStr} · sin(${angStr}°)`;
+                    yExpr = `-${magStr} · cos(${angStr}°)`;
+                    break;
+            }
+
+            return {
+                valX,
+                valY,
+                xExpr,
+                yExpr,
+                formattedX: `${xExpr} = <strong>${valX.toFixed(2)} ${unit}</strong>`,
+                formattedY: `${yExpr} = <strong>${valY.toFixed(2)} ${unit}</strong>`
+            };
+        }
+
+        // Sets constant scale for the radial grid based on vector bounds
+        function determineFixedGridScale() {
+            let maxM = Math.max(state.vecA.mag, state.vecB.mag);
+            if (state.vectorCount === 3) maxM = Math.max(maxM, state.vecC.mag);
+            if (state.resultant && state.resultant.mag) maxM = Math.max(maxM, state.resultant.mag);
+            // FIX: in head-to-tail mode the tip of A + B can be farther out than any single vector or R
+            if (state.vectorCount === 3) {
+                const abx = state.components.ax + state.components.bx;
+                const aby = state.components.ay + state.components.by;
+                maxM = Math.max(maxM, Math.sqrt(abx * abx + aby * aby));
+            }
+
+            if (maxM <= 90) {
+                state.fixedGridMaxRange = 120;
+                state.fixedGridStep = 30;
+            } else if (maxM <= 140) {
+                state.fixedGridMaxRange = 160;
+                state.fixedGridStep = 40;
+            } else if (maxM <= 200) {
+                state.fixedGridMaxRange = 220;
+                state.fixedGridStep = 55;
+            } else {
+                state.fixedGridMaxRange = 280;
+                state.fixedGridStep = 70;
+            }
+        }
+
+        function generateRandomVectors() {
+            // Keep current state.vectorCount unless uninitialized
+            if (!state.vectorCount) {
+                state.vectorCount = Math.random() < 0.5 ? 2 : 3;
+            }
+
+            // When vectorCount is 3, designate exactly one vector (A, B, or C) as strictly axial
+            const axialIndex = state.vectorCount === 3 ? Math.floor(Math.random() * 3) : -1;
+
+            if (state.question === 'q1') {
+                state.unit = 'km';
+                const axialAngles = [0, 90, 180, 270];
+
+                const generateVectorQ1 = (index) => {
+                    const mag = Number((Math.random() * (90.0 - 40.0) + 40.0).toFixed(1));
+                    if (index === axialIndex) {
+                        const angle = axialAngles[Math.floor(Math.random() * axialAngles.length)];
+                        return { mag, angle, isAxial: true, axialDir: `${angle}°` };
+                    } else {
+                        // Non-axial vector: generate non-quadrantal angle with clear acute offset (15° to 75°)
+                        const quad = Math.floor(Math.random() * 4); // 0, 1, 2, or 3
+                        const acute = Number((Math.random() * (75.0 - 15.0) + 15.0).toFixed(1));
+                        const angle = quad * 90 + acute;
+                        return { mag, angle, isAxial: false, axialDir: '' };
+                    }
+                };
+
+                state.vecA = generateVectorQ1(0);
+                state.vecB = generateVectorQ1(1);
+
+                if (state.vectorCount === 3) {
+                    state.vecC = generateVectorQ1(2);
+                } else {
+                    state.vecC = { mag: 0, angle: 0, isAxial: false, axialDir: '' };
+                }
+            } else {
+                state.unit = 'm';
+                const pureCardinals = ['East', 'North', 'West', 'South'];
+
+                const generateVectorQ2 = (index, usedRef = '') => {
+                    const mag = Number((Math.random() * (90.0 - 40.0) + 40.0).toFixed(1));
+                    if (index === axialIndex) {
+                        const dir = pureCardinals[Math.floor(Math.random() * pureCardinals.length)];
+                        let angle = 0;
+                        if (dir === 'East') angle = 0;
+                        else if (dir === 'North') angle = 90;
+                        else if (dir === 'West') angle = 180;
+                        else if (dir === 'South') angle = 270;
+                        return { mag, angleVal: 0, cardinalRef: dir, angle, isAxial: true, axialDir: dir };
+                    } else {
+                        const angleVal = Number((Math.random() * (75.0 - 15.0) + 15.0).toFixed(1));
+                        let ref = CARDINAL_OPTIONS[Math.floor(Math.random() * CARDINAL_OPTIONS.length)];
+                        while (ref === usedRef) {
+                            ref = CARDINAL_OPTIONS[Math.floor(Math.random() * CARDINAL_OPTIONS.length)];
+                        }
+                        return { mag, angleVal, cardinalRef: ref, angle: cardinalToCCW(angleVal, ref), isAxial: false, axialDir: '' };
+                    }
+                };
+
+                state.vecA = generateVectorQ2(0);
+                state.vecB = generateVectorQ2(1, state.vecA.cardinalRef);
+
+                if (state.vectorCount === 3) {
+                    state.vecC = generateVectorQ2(2, state.vecB.cardinalRef);
+                } else {
+                    state.vecC = { mag: 0, angle: 0, angleVal: 0, cardinalRef: '', isAxial: false, axialDir: '' };
+                }
+            }
+
+            state.showResultantOnCanvas = false;
+            state.vectorsVisible = false;
+            state.isHeadToTail = false;
+            state.isSolved = false;
+            state.showingSolution = false;
+            state.solutionViewed = false;
+            state.zoomLevel = 1.0;
+
+            computePhysicsSolution();
+            determineFixedGridScale();
+            updateUI();
+            resetInputsAndFeedback();
+            drawVectors();
+        }
+
+        function computePhysicsSolution() {
+            let ax = 0, ay = 0;
+            let bx = 0, by = 0;
+            let cx = 0, cy = 0;
+
+            if (state.question === 'q1') {
+                const radA = toRad(state.vecA.angle);
+                const radB = toRad(state.vecB.angle);
+                ax = state.vecA.mag * Math.cos(radA);
+                ay = state.vecA.mag * Math.sin(radA);
+                bx = state.vecB.mag * Math.cos(radB);
+                by = state.vecB.mag * Math.sin(radB);
+
+                if (state.vectorCount === 3) {
+                    const radC = toRad(state.vecC.angle);
+                    cx = state.vecC.mag * Math.cos(radC);
+                    cy = state.vecC.mag * Math.sin(radC);
+                }
+            } else {
+                const compA = getAcuteCardinalComponents(state.vecA.mag, state.vecA.angleVal, state.vecA.cardinalRef, state.unit, state.vecA.isAxial, state.vecA.axialDir);
+                const compB = getAcuteCardinalComponents(state.vecB.mag, state.vecB.angleVal, state.vecB.cardinalRef, state.unit, state.vecB.isAxial, state.vecB.axialDir);
+                ax = compA.valX;
+                ay = compA.valY;
+                bx = compB.valX;
+                by = compB.valY;
+
+                if (state.vectorCount === 3) {
+                    const compC = getAcuteCardinalComponents(state.vecC.mag, state.vecC.angleVal, state.vecC.cardinalRef, state.unit, state.vecC.isAxial, state.vecC.axialDir);
+                    cx = compC.valX;
+                    cy = compC.valY;
+                }
+            }
+
+            state.components = { ax, ay, bx, by, cx, cy };
+
+            let rx = ax + bx + (state.vectorCount === 3 ? cx : 0);
+            let ry = ay + by + (state.vectorCount === 3 ? cy : 0);
+
+            // Guard against near-zero floating precision artifacts
+            if (Math.abs(rx) < 1e-7) rx = 0;
+            if (Math.abs(ry) < 1e-7) ry = 0;
+
+            const mag = Math.sqrt(rx * rx + ry * ry);
+            let angleRad = Math.atan2(ry, rx);
+            let angleDeg = normalizeAngle(toDeg(angleRad));
+
+            const cardinalData = cartesianToCardinals(rx, ry);
+
+            // FIX: an angle such as 359.997° rounds to 360.00; report it as 0.00 (0 ≤ θ < 360)
+            let angleCCW = Number(angleDeg.toFixed(2));
+            if (angleCCW >= 360) angleCCW = 0;
+
+            state.resultant = {
+                mag: Number(mag.toFixed(2)),
+                angleCCW: angleCCW,
+                rx: Number(rx.toFixed(2)),
+                ry: Number(ry.toFixed(2)),
+                cardinalPrimary: cardinalData.primary,
+                cardinalSecondary: cardinalData.secondary,
+                quadrantInfo: cardinalData.quadrant
+            };
+        }
+
+        function updateUI() {
+            const q = state.question;
+            const unit = state.unit;
+            const count = state.vectorCount;
+
+            const btnQ1 = document.getElementById('modeQ1');
+            const btnQ2 = document.getElementById('modeQ2');
+
+            const activeTabClass = "px-2.5 py-1 text-xs font-semibold rounded-md bg-white text-blue-800 shadow-sm transition flex items-center gap-1 cursor-pointer";
+            const inactiveTabClass = "px-2.5 py-1 text-xs font-medium rounded-md text-slate-600 hover:text-slate-900 transition flex items-center gap-1 cursor-pointer";
+
+            btnQ1.className = q === 'q1' ? activeTabClass : inactiveTabClass;
+            btnQ2.className = q === 'q2' ? activeTabClass : inactiveTabClass;
+
+            const btnCount2 = document.getElementById('btnCount2');
+            const btnCount3 = document.getElementById('btnCount3');
+            const activeCountClass = "px-2.5 sm:px-3 py-1 text-xs font-semibold rounded-md bg-blue-700 text-white shadow-sm transition flex items-center gap-1.5 cursor-pointer";
+            const inactiveCountClass = "px-2.5 sm:px-3 py-1 text-xs font-medium rounded-md text-slate-600 hover:text-slate-900 bg-transparent transition flex items-center gap-1.5 cursor-pointer";
+
+            if (btnCount2 && btnCount3) {
+                btnCount2.className = count === 2 ? activeCountClass : inactiveCountClass;
+                btnCount3.className = count === 3 ? activeCountClass : inactiveCountClass;
+            }
+
+            document.getElementById('vectorCountBadge').innerText = `${count} Vectors`;
+            document.getElementById('unitMagnitudeDisplay').innerText = unit;
+
+            const vecCardsContainer = document.getElementById('vectorCardsContainer');
+            const vecCCard = document.getElementById('vecCCard');
+            const legendVecCRow = document.getElementById('legendVecCRow');
+            const legendResultantLabel = document.getElementById('legendResultantLabel');
+
+            if (count === 3) {
+                vecCardsContainer.className = "grid grid-cols-1 sm:grid-cols-3 gap-3 my-3";
+                vecCCard.classList.remove('hidden');
+                legendVecCRow.classList.remove('hidden');
+                legendResultantLabel.innerHTML = '<b>R</b> = <b>A</b> + <b>B</b> + <b>C</b>';
+                document.getElementById('operationQuestionTextA').innerHTML = `<strong>a.</strong> Find the resultant <b>R</b> = <b>A</b> + <b>B</b> + <b>C</b>.`;
+                document.getElementById('problemContextText').innerText = 'Consider the three coplanar displacement vectors given below:';
+            } else {
+                vecCardsContainer.className = "grid grid-cols-1 sm:grid-cols-2 gap-3 my-3";
+                vecCCard.classList.add('hidden');
+                legendVecCRow.classList.add('hidden');
+                legendResultantLabel.innerHTML = '<b>R</b> = <b>A</b> + <b>B</b>';
+                document.getElementById('operationQuestionTextA').innerHTML = `<strong>a.</strong> Find the resultant <b>R</b> = <b>A</b> + <b>B</b>.`;
+                document.getElementById('problemContextText').innerText = 'Consider the two coplanar displacement vectors given below:';
+            }
+
+            const formatVectorString = (vec) => {
+                if (q === 'q1') {
+                    return `${vec.mag.toFixed(1)} ${unit} @ ${vec.angle.toFixed(1)}°`;
+                } else {
+                    if (vec.isAxial) {
+                        return `${vec.mag.toFixed(1)} ${unit} due ${vec.axialDir}`;
+                    }
+                    return `${vec.mag.toFixed(1)} ${unit} @ ${vec.angleVal.toFixed(1)}° ${vec.cardinalRef}`;
+                }
+            };
+
+            document.getElementById('vecAString').innerText = formatVectorString(state.vecA);
+            document.getElementById('vecBString').innerText = formatVectorString(state.vecB);
+            if (count === 3) {
+                document.getElementById('vecCString').innerText = formatVectorString(state.vecC);
+            }
+
+            if (q === 'q1') {
+                document.getElementById('problemBadge').innerText = 'Question 1';
+                document.getElementById('problemTitle').innerText = `Resultant Vector Addition (${count} Vectors • Polar)`;
+                document.getElementById('operationQuestionTextB').innerHTML = `<strong>b.</strong> Give your angle as a positive angle measured counterclockwise from the positive x-axis (0° ≤ θ &lt; 360°).`;
+                document.getElementById('cardinalSelectContainer').classList.add('hidden');
+                document.getElementById('dirFieldMsg').innerHTML = `Tolerance: ±1% of exact value (0° ≤ θ &lt; 360°)`;
+            } else {
+                document.getElementById('problemBadge').innerText = 'Question 2';
+                document.getElementById('problemTitle').innerText = `Resultant Vector Addition (${count} Vectors • Cardinal)`;
+                document.getElementById('operationQuestionTextB').innerHTML = `<strong>b.</strong> Find the direction of <b>R</b>, given in terms of the cardinal directions (select reference bearing from dropdown).`;
+                document.getElementById('cardinalSelectContainer').classList.remove('hidden');
+                document.getElementById('dirFieldMsg').innerHTML = `Tolerance: ±1% of acute angle + matching cardinal bearing`;
+            }
+
+            updateHeadToTailButtonUI();
+            updateViewVectorsButtonUI();
+            renderSolutionHtml();
+        }
+
+        function renderSolutionHtml() {
+            const q = state.question;
+            const unit = state.unit;
+            const count = state.vectorCount;
+            const ax = state.components.ax;
+            const ay = state.components.ay;
+            const bx = state.components.bx;
+            const by = state.components.by;
+            const cx = state.components.cx;
+            const cy = state.components.cy;
+            const rx = state.resultant.rx;
+            const ry = state.resultant.ry;
+            const mag = state.resultant.mag;
+
+            let directionExplanation = '';
+
+            if (q === 'q1') {
+                const angle = state.resultant.angleCCW;
+                directionExplanation = `
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1 font-num">
+                        <div class="font-bold text-slate-800">Step 4: Determine Angle θ from +x-axis</div>
+                        <div class="text-xs text-slate-600">θ = atan2(R<sub>y</sub>, R<sub>x</sub>) = atan2(${ry.toFixed(2)}, ${rx.toFixed(2)})</div>
+                        <div class="text-xs text-blue-800 font-bold">θ = ${angle.toFixed(1)}° counterclockwise from +x</div>
+                    </div>
+                `;
+            } else {
+                const primary = state.resultant.cardinalPrimary;
+                const secondary = state.resultant.cardinalSecondary;
+                const quad = state.resultant.quadrantInfo;
+
+                directionExplanation = `
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-2 font-num">
+                        <div class="font-bold text-slate-800">Step 4: Cardinal Direction Resolution</div>
+                        <div class="text-xs text-slate-600">Signs of components: R<sub>x</sub> = ${rx.toFixed(2)} (${rx >= 0 ? 'East' : 'West'}), R<sub>y</sub> = ${ry.toFixed(2)} (${ry >= 0 ? 'North' : 'South'}).</div>
+                        <div class="text-xs text-slate-700">Location: <strong>${quad}</strong></div>
+                        <div class="text-xs text-blue-800 font-semibold space-y-0.5">
+                            <div>Primary Bearing: <strong>${primary.angle.toFixed(1)}° ${primary.ref}</strong></div>
+                            <div>Equivalent Bearing: <strong>${secondary.angle.toFixed(1)}° ${secondary.ref}</strong></div>
+                        </div>
+                        <div class="text-[11px] text-slate-600 italic">Either valid cardinal notation is accepted.</div>
+                    </div>
+                `;
+            }
+
+            let step1ComponentsHtml = '';
+            let step2SumHtml = '';
+
+            if (q === 'q1') {
+                step1ComponentsHtml = `
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-2 font-num">
+                        <div class="font-bold text-slate-800">Step 1: Resolve Vectors into Components</div>
+                        <div class="grid grid-cols-1 ${count === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-2 text-xs">
+                            <div class="p-2.5 bg-blue-50/70 border border-blue-100 rounded-lg">
+                                <div class="font-bold text-blue-800 mb-1">Vector A (${state.vecA.mag.toFixed(1)} ${unit}):</div>
+                                <div>A<sub>x</sub> = ${state.vecA.mag.toFixed(1)} · cos(${state.vecA.angle.toFixed(1)}°) = <strong>${ax.toFixed(2)} ${unit}</strong></div>
+                                <div>A<sub>y</sub> = ${state.vecA.mag.toFixed(1)} · sin(${state.vecA.angle.toFixed(1)}°) = <strong>${ay.toFixed(2)} ${unit}</strong></div>
+                            </div>
+                            <div class="p-2.5 bg-amber-50/70 border border-amber-100 rounded-lg">
+                                <div class="font-bold text-amber-800 mb-1">Vector B (${state.vecB.mag.toFixed(1)} ${unit}):</div>
+                                <div>B<sub>x</sub> = ${state.vecB.mag.toFixed(1)} · cos(${state.vecB.angle.toFixed(1)}°) = <strong>${bx.toFixed(2)} ${unit}</strong></div>
+                                <div>B<sub>y</sub> = ${state.vecB.mag.toFixed(1)} · sin(${state.vecB.angle.toFixed(1)}°) = <strong>${by.toFixed(2)} ${unit}</strong></div>
+                            </div>
+                            ${count === 3 ? `
+                            <div class="p-2.5 bg-purple-50/70 border border-purple-100 rounded-lg">
+                                <div class="font-bold text-purple-800 mb-1">Vector C (${state.vecC.mag.toFixed(1)} ${unit}):</div>
+                                <div>C<sub>x</sub> = ${state.vecC.mag.toFixed(1)} · cos(${state.vecC.angle.toFixed(1)}°) = <strong>${cx.toFixed(2)} ${unit}</strong></div>
+                                <div>C<sub>y</sub> = ${state.vecC.mag.toFixed(1)} · sin(${state.vecC.angle.toFixed(1)}°) = <strong>${cy.toFixed(2)} ${unit}</strong></div>
+                            </div>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                step2SumHtml = `
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5 font-num text-xs">
+                        <div class="font-bold text-slate-800 text-sm">Step 2: Sum the Components (R = ${count === 3 ? 'A + B + C' : 'A + B'})</div>
+                        <div>R<sub>x</sub> = A<sub>x</sub> + B<sub>x</sub> ${count === 3 ? '+ C<sub>x</sub>' : ''} = ${ax.toFixed(2)} + (${bx.toFixed(2)}) ${count === 3 ? `+ (${cx.toFixed(2)})` : ''} = <strong class="text-blue-800">${rx.toFixed(2)} ${unit}</strong></div>
+                        <div>R<sub>y</sub> = A<sub>y</sub> + B<sub>y</sub> ${count === 3 ? '+ C<sub>y</sub>' : ''} = ${ay.toFixed(2)} + (${by.toFixed(2)}) ${count === 3 ? `+ (${cy.toFixed(2)})` : ''} = <strong class="text-blue-800">${ry.toFixed(2)} ${unit}</strong></div>
+                    </div>
+                `;
+            } else {
+                const decA = getAcuteCardinalComponents(state.vecA.mag, state.vecA.angleVal, state.vecA.cardinalRef, unit, state.vecA.isAxial, state.vecA.axialDir);
+                const decB = getAcuteCardinalComponents(state.vecB.mag, state.vecB.angleVal, state.vecB.cardinalRef, unit, state.vecB.isAxial, state.vecB.axialDir);
+                const decC = count === 3 ? getAcuteCardinalComponents(state.vecC.mag, state.vecC.angleVal, state.vecC.cardinalRef, unit, state.vecC.isAxial, state.vecC.axialDir) : null;
+
+                const getVecHeader = (vec, label) => {
+                    if (vec.isAxial) return `${label} (${vec.mag.toFixed(1)} ${unit} due ${vec.axialDir})`;
+                    return `${label} (${vec.mag.toFixed(1)} ${unit} @ ${vec.angleVal.toFixed(1)}° ${vec.cardinalRef})`;
+                };
+
+                step1ComponentsHtml = `
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-2 font-num">
+                        <div class="font-bold text-slate-800">Step 1: Resolve Acute Right Triangles with Directional Signs</div>
+                        <div class="grid grid-cols-1 ${count === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'} gap-2 text-xs">
+                            <div class="p-2.5 bg-blue-50/70 border border-blue-100 rounded-lg">
+                                <div class="font-bold text-blue-800 mb-1">${getVecHeader(state.vecA, 'Vector A')}:</div>
+                                <div>A<sub>x</sub> = ${decA.formattedX}</div>
+                                <div>A<sub>y</sub> = ${decA.formattedY}</div>
+                            </div>
+                            <div class="p-2.5 bg-amber-50/70 border border-amber-100 rounded-lg">
+                                <div class="font-bold text-amber-800 mb-1">${getVecHeader(state.vecB, 'Vector B')}:</div>
+                                <div>B<sub>x</sub> = ${decB.formattedX}</div>
+                                <div>B<sub>y</sub> = ${decB.formattedY}</div>
+                            </div>
+                            ${count === 3 ? `
+                            <div class="p-2.5 bg-purple-50/70 border border-purple-100 rounded-lg">
+                                <div class="font-bold text-purple-800 mb-1">${getVecHeader(state.vecC, 'Vector C')}:</div>
+                                <div>C<sub>x</sub> = ${decC.formattedX}</div>
+                                <div>C<sub>y</sub> = ${decC.formattedY}</div>
+                            </div>` : ''}
+                        </div>
+                    </div>
+                `;
+
+                step2SumHtml = `
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1.5 font-num text-xs">
+                        <div class="font-bold text-slate-800 text-sm">Step 2: Sum the Signed Components (R = ${count === 3 ? 'A + B + C' : 'A + B'})</div>
+                        <div>R<sub>x</sub> = A<sub>x</sub> + B<sub>x</sub> ${count === 3 ? '+ C<sub>x</sub>' : ''} = (${ax.toFixed(2)}) + (${bx.toFixed(2)}) ${count === 3 ? `+ (${cx.toFixed(2)})` : ''} = <strong class="text-blue-800">${rx.toFixed(2)} ${unit}</strong></div>
+                        <div>R<sub>y</sub> = A<sub>y</sub> + B<sub>y</sub> ${count === 3 ? '+ C<sub>y</sub>' : ''} = (${ay.toFixed(2)}) + (${by.toFixed(2)}) ${count === 3 ? `+ (${cy.toFixed(2)})` : ''} = <strong class="text-blue-800">${ry.toFixed(2)} ${unit}</strong></div>
+                    </div>
+                `;
+            }
+
+            const html = `
+                <div class="space-y-3.5">
+                    ${step1ComponentsHtml}
+                    ${step2SumHtml}
+                    <div class="p-3.5 bg-slate-50 rounded-xl border border-slate-200 space-y-1 font-num text-xs">
+                        <div class="font-bold text-slate-800 text-sm">Step 3: Calculate Resultant Magnitude (Pythagorean Theorem)</div>
+                        <div>|<b>R</b>| = √(R<sub>x</sub>² + R<sub>y</sub>²) = √[(${rx.toFixed(2)})² + (${ry.toFixed(2)})²]</div>
+                        <div class="text-emerald-700 font-bold text-sm">|<b>R</b>| = ${mag.toFixed(1)} ${unit}</div>
+                    </div>
+                    ${directionExplanation}
+                </div>
+            `;
+
+            const container = document.getElementById('solutionContent');
+            if (container) {
+                container.innerHTML = html;
+            }
+        }
+
+        function setFieldStatus(inputEl, badgeEl, msgEl, status, statusText, helperText) {
+            inputEl.classList.remove(
+                'border-emerald-500', 'bg-emerald-50/70', 'focus:border-emerald-500', 'focus:ring-emerald-500',
+                'border-rose-500', 'bg-rose-50/70', 'focus:border-rose-500', 'focus:ring-rose-500',
+                'border-slate-300', 'bg-slate-50'
+            );
+            badgeEl.classList.remove('hidden', 'text-emerald-600', 'text-rose-600');
+            msgEl.classList.remove('text-emerald-700', 'text-rose-700', 'text-slate-600');
+
+            if (status === 'correct') {
+                inputEl.classList.add('border-emerald-500', 'bg-emerald-50/70', 'focus:border-emerald-500', 'focus:ring-emerald-500');
+                badgeEl.classList.add('text-emerald-600');
+                badgeEl.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${statusText || 'Correct'}`;
+                msgEl.classList.add('text-emerald-700');
+                if (helperText) msgEl.innerHTML = helperText;
+            } else if (status === 'incorrect') {
+                inputEl.classList.add('border-rose-500', 'bg-rose-50/70', 'focus:border-rose-500', 'focus:ring-rose-500');
+                badgeEl.classList.add('text-rose-600');
+                badgeEl.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> ${statusText || 'Incorrect'}`;
+                msgEl.classList.add('text-rose-700');
+                if (helperText) msgEl.innerHTML = helperText;
+            } else {
+                inputEl.classList.add('border-slate-300', 'bg-slate-50');
+                badgeEl.classList.add('hidden');
+                msgEl.classList.add('text-slate-600');
+                if (helperText) msgEl.innerHTML = helperText;
+            }
+        }
+
+        function resetFieldValidationStyles() {
+            const magInput = document.getElementById('inputMagnitude');
+            const magBadge = document.getElementById('magFieldBadge');
+            const magMsg = document.getElementById('magFieldMsg');
+            setFieldStatus(magInput, magBadge, magMsg, 'neutral', '', 'Tolerance: ±1% of exact value');
+
+            const dirInput = document.getElementById('inputAngle');
+            const dirBadge = document.getElementById('dirFieldBadge');
+            const dirMsg = document.getElementById('dirFieldMsg');
+            const defaultDirNote = state.question === 'q1' 
+                ? 'Tolerance: ±1% of exact value (0° ≤ θ &lt; 360°)' 
+                : 'Tolerance: ±1% of acute angle + matching cardinal bearing';
+            setFieldStatus(dirInput, dirBadge, dirMsg, 'neutral', '', defaultDirNote);
+
+            const cardinalSel = document.getElementById('cardinalSelect');
+            if (cardinalSel) {
+                cardinalSel.classList.remove('border-emerald-500', 'bg-emerald-50/70', 'border-rose-500', 'bg-rose-50/70');
+                cardinalSel.classList.add('border-slate-300', 'bg-slate-50');
+            }
+        }
+
+        function checkAnswer() {
+            const magInput = document.getElementById('inputMagnitude');
+            const angleInput = document.getElementById('inputAngle');
+            const magBadge = document.getElementById('magFieldBadge');
+            const dirBadge = document.getElementById('dirFieldBadge');
+            const magMsg = document.getElementById('magFieldMsg');
+            const dirMsg = document.getElementById('dirFieldMsg');
+            const cardinalSel = document.getElementById('cardinalSelect');
+
+            const userMagInput = magInput.value.trim();
+            const userAngleInput = angleInput.value.trim();
+
+            if (!userMagInput || !userAngleInput) {
+                showFeedback('error', 'Missing Input', 'Please enter numerical values for both the magnitude and direction.');
+                return;
+            }
+
+            const userMag = parseFloat(userMagInput);
+            const userAngleRaw = parseFloat(userAngleInput);
+
+            if (isNaN(userMag) || isNaN(userAngleRaw)) {
+                showFeedback('error', 'Invalid Input', 'Please enter valid numerical digits.');
+                return;
+            }
+
+            if (userMag < 0) {
+                setFieldStatus(magInput, magBadge, magMsg, 'incorrect', 'Negative Value', 'Magnitude must be a non-negative scalar (|<b>R</b>| ≥ 0).');
+                showFeedback('warning', 'Negative Magnitude', 'Magnitude must be a non-negative scalar (|<b>R</b>| ≥ 0). Would you like to try again or see the solution?', true);
+                return;
+            }
+
+            const isPolar = state.question === 'q1';
+            const targetMag = state.resultant.mag;
+            const magTolerance = targetMag * 0.01;
+            const isMagCorrect = Math.abs(userMag - targetMag) <= magTolerance;
+
+            if (isMagCorrect) {
+                setFieldStatus(magInput, magBadge, magMsg, 'correct', 'Correct', `Within ±1% of exact magnitude (${targetMag.toFixed(1)} ${state.unit})`);
+            } else {
+                setFieldStatus(magInput, magBadge, magMsg, 'incorrect', 'Incorrect', `Off by ${Math.abs(userMag - targetMag).toFixed(2)} ${state.unit} (allowed error: ±${magTolerance.toFixed(2)} ${state.unit})`);
+            }
+
+            let isAngleCorrect = false;
+            let feedbackDetail = '';
+
+            if (isPolar) {
+                const userAngle = normalizeAngle(userAngleRaw);
+                const targetAngle = state.resultant.angleCCW;
+
+                let angleDiff = Math.abs(userAngle - targetAngle);
+                if (angleDiff > 180) angleDiff = 360 - angleDiff;
+
+                const angleTolerance = Math.max(0.05, targetAngle * 0.01);
+                isAngleCorrect = angleDiff <= angleTolerance;
+
+                if (isAngleCorrect) {
+                    setFieldStatus(angleInput, dirBadge, dirMsg, 'correct', 'Correct', `Within ±1% of exact angle (${targetAngle.toFixed(1)}°)`);
+                } else {
+                    setFieldStatus(angleInput, dirBadge, dirMsg, 'incorrect', 'Incorrect', `Off by ${angleDiff.toFixed(1)}° (allowed error: ±${angleTolerance.toFixed(2)}°)`);
+                }
+
+                feedbackDetail = `
+                    Magnitude: ${isMagCorrect ? '<span class="text-emerald-700 font-semibold">Correct</span>' : '<span class="text-rose-700 font-semibold">Incorrect</span>'} (${userMag.toFixed(1)} ${state.unit})<br>
+                    Direction: ${isAngleCorrect ? '<span class="text-emerald-700 font-semibold">Correct</span>' : '<span class="text-rose-700 font-semibold">Incorrect</span>'} (${userAngleRaw.toFixed(1)}°)
+                `;
+            } else {
+                const selectedCardinal = cardinalSel.value;
+
+                if (!selectedCardinal) {
+                    setFieldStatus(angleInput, dirBadge, dirMsg, 'incorrect', 'Direction Missing', 'Select a cardinal direction from the dropdown.');
+                    cardinalSel.classList.add('border-rose-500', 'bg-rose-50/70');
+                    showFeedback('warning', 'Direction Unselected', 'Please select one of the eight cardinal bearings from the dropdown menu.', true);
+                    return;
+                }
+
+                const primary = state.resultant.cardinalPrimary;
+                const secondary = state.resultant.cardinalSecondary;
+
+                let matchedTarget = null;
+                if (selectedCardinal === primary.ref) {
+                    matchedTarget = primary.angle;
+                } else if (selectedCardinal === secondary.ref) {
+                    matchedTarget = secondary.angle;
+                }
+
+                const isCardinalBearingCorrect = matchedTarget !== null;
+
+                if (isCardinalBearingCorrect) {
+                    cardinalSel.classList.remove('border-rose-500', 'bg-rose-50/70', 'border-slate-300', 'bg-slate-50');
+                    cardinalSel.classList.add('border-emerald-500', 'bg-emerald-50/70');
+
+                    const angleTolerance = Math.max(0.05, matchedTarget * 0.01);
+                    const diff = Math.abs(userAngleRaw - matchedTarget);
+                    isAngleCorrect = diff <= angleTolerance;
+
+                    if (isAngleCorrect) {
+                        setFieldStatus(angleInput, dirBadge, dirMsg, 'correct', 'Correct', `Bearing and angle matched (${matchedTarget.toFixed(1)}° ${selectedCardinal})`);
+                    } else {
+                        setFieldStatus(angleInput, dirBadge, dirMsg, 'incorrect', 'Angle Incorrect', `Bearing is correct, but angle is off by ${diff.toFixed(1)}° (allowed: ±${angleTolerance.toFixed(2)}°)`);
+                    }
+                } else {
+                    cardinalSel.classList.remove('border-emerald-500', 'bg-emerald-50/70', 'border-slate-300', 'bg-slate-50');
+                    cardinalSel.classList.add('border-rose-500', 'bg-rose-50/70');
+
+                    const matchesNumericP = Math.abs(userAngleRaw - primary.angle) <= Math.max(0.05, primary.angle * 0.01);
+                    const matchesNumericS = Math.abs(userAngleRaw - secondary.angle) <= Math.max(0.05, secondary.angle * 0.01);
+
+                    if (matchesNumericP || matchesNumericS) {
+                        setFieldStatus(angleInput, dirBadge, dirMsg, 'correct', 'Angle Valid', `Angle is correct, but bearing <b>${selectedCardinal}</b> is in the wrong quadrant.`);
+                    } else {
+                        setFieldStatus(angleInput, dirBadge, dirMsg, 'incorrect', 'Incorrect', `Both angle and bearing <b>${selectedCardinal}</b> are incorrect for this quadrant.`);
+                    }
+                    isAngleCorrect = false;
+                }
+
+                feedbackDetail = `
+                    Magnitude: ${isMagCorrect ? '<span class="text-emerald-700 font-semibold">Correct</span>' : '<span class="text-rose-700 font-semibold">Incorrect</span>'} (${userMag.toFixed(1)} ${state.unit})<br>
+                    Direction: ${isAngleCorrect ? '<span class="text-emerald-700 font-semibold">Correct</span>' : '<span class="text-rose-700 font-semibold">Incorrect</span>'} (${userAngleRaw.toFixed(1)}° ${selectedCardinal})
+                `;
+            }
+
+            if (isMagCorrect && isAngleCorrect) {
+                state.showResultantOnCanvas = true;
+                state.vectorsVisible = true;
+                updateViewVectorsButtonUI();
+                drawVectors();
+
+                // FIX: points only if the solution was not opened first
+                const earnedPoints = !state.isSolved && !state.solutionViewed;
+                if (!state.isSolved) {
+                    state.isSolved = true;
+                    if (earnedPoints) {
+                        state.score += 10;
+                        state.streak += 1;
+                        document.getElementById('scoreDisplay').innerText = state.score;
+                        document.getElementById('streakDisplay').innerText = state.streak;
+                    }
+                }
+
+                showFeedback('success', 'Completely Correct!', `
+                    <div class="space-y-1">
+                        <p>Both the magnitude and direction are correct within the ±1% tolerance!</p>
+                        ${state.solutionViewed ? '<p class="text-xs italic">No points awarded: the solution was viewed for this problem.</p>' : ''}
+                        <div class="font-num text-xs mt-1 text-emerald-800">
+                            ${feedbackDetail}
+                        </div>
+                    </div>
+                `, false);
+            } else {
+                // FIX: a wrong re-submission on an already-solved problem no longer resets the streak
+                if (!state.isSolved) {
+                    state.streak = 0;
+                    document.getElementById('streakDisplay').innerText = state.streak;
+                }
+
+                const statusSummary = (isMagCorrect || isAngleCorrect) 
+                    ? 'Partially Correct: Check the green and red highlights above.' 
+                    : 'Both parts are incorrect: Check the red highlights above.';
+
+                showFeedback('warning', statusSummary, `
+                    <div class="space-y-2">
+                        <div class="font-num text-xs text-slate-800">
+                            ${feedbackDetail}
+                        </div>
+                        <div class="pt-2 border-t border-amber-200/80">
+                            <p class="font-semibold text-amber-950 text-xs sm:text-sm">
+                                Would you like to try again, or be shown the solution?
+                            </p>
+                        </div>
+                    </div>
+                `, true);
+            }
+        }
+
+        function showFeedback(type, title, message, showRetryOptions = false) {
+            const box = document.getElementById('feedbackBox');
+            box.classList.remove('hidden', 'bg-emerald-50', 'border-emerald-300', 'text-emerald-900', 'bg-amber-50', 'border-amber-300', 'text-amber-900', 'bg-rose-50', 'border-rose-300', 'text-rose-900');
+
+            let icon = '';
+            let styleClasses = [];
+
+            if (type === 'success') {
+                styleClasses = ['bg-emerald-50', 'border-2', 'border-emerald-300', 'text-emerald-900'];
+                icon = '<i class="fa-solid fa-circle-check text-emerald-600 text-lg mr-2"></i>';
+            } else if (type === 'warning') {
+                styleClasses = ['bg-amber-50', 'border-2', 'border-amber-300', 'text-amber-900'];
+                icon = '<i class="fa-solid fa-triangle-exclamation text-amber-600 text-lg mr-2"></i>';
+            } else {
+                styleClasses = ['bg-rose-50', 'border-2', 'border-rose-300', 'text-rose-900'];
+                icon = '<i class="fa-solid fa-circle-xmark text-rose-600 text-lg mr-2"></i>';
+            }
+
+            let retryActionsHtml = '';
+            if (showRetryOptions) {
+                retryActionsHtml = `
+                    <div class="mt-3.5 flex flex-wrap items-center gap-2.5">
+                        <button 
+                            type="button" 
+                            onclick="tryAgainAction()"
+                            class="px-4 py-2 bg-amber-600 hover:bg-amber-700 active:bg-amber-800 text-white text-xs sm:text-sm font-semibold rounded-lg transition shadow-sm flex items-center gap-1.5 cursor-pointer"
+                        >
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Try Again</span>
+                        </button>
+                        <button 
+                            type="button" 
+                            onclick="revealSolutionFromPrompt()"
+                            class="px-4 py-2 bg-white hover:bg-slate-100 active:bg-slate-200 text-slate-800 border border-slate-300 text-xs sm:text-sm font-semibold rounded-lg transition shadow-sm flex items-center gap-1.5 cursor-pointer"
+                        >
+                            <i class="fa-solid fa-lightbulb text-amber-500"></i>
+                            <span>Show Solution</span>
+                        </button>
+                    </div>
+                `;
+            }
+
+            box.classList.add(...styleClasses);
+            box.innerHTML = `
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 pt-0.5">${icon}</div>
+                    <div class="flex-grow">
+                        <h4 class="font-bold text-sm">${title}</h4>
+                        <div class="text-xs mt-0.5 leading-relaxed">${message}</div>
+                        ${retryActionsHtml}
+                    </div>
+                </div>
+            `;
+            box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function tryAgainAction() {
+            const magInput = document.getElementById('inputMagnitude');
+            const angleInput = document.getElementById('inputAngle');
+            const magBadge = document.getElementById('magFieldBadge');
+            const dirBadge = document.getElementById('dirFieldBadge');
+
+            document.getElementById('feedbackBox').classList.add('hidden');
+
+            if (magBadge.classList.contains('text-rose-600')) {
+                magInput.focus();
+                magInput.select();
+            } else if (dirBadge.classList.contains('text-rose-600')) {
+                angleInput.focus();
+                angleInput.select();
+            } else {
+                magInput.focus();
+            }
+        }
+
+        function revealSolutionFromPrompt() {
+            if (!state.showingSolution) {
+                toggleSolution();
+            }
+            const solutionCard = document.getElementById('solutionCard');
+            solutionCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function toggleSolution() {
+            const card = document.getElementById('solutionCard');
+            const btnText = document.getElementById('solutionBtnText');
+            state.showingSolution = !state.showingSolution;
+
+            if (state.showingSolution) {
+                card.classList.remove('hidden');
+                btnText.innerText = "Hide Solution";
+                if (!state.isSolved) state.solutionViewed = true;
+                state.showResultantOnCanvas = true;
+                state.vectorsVisible = true;
+                updateViewVectorsButtonUI();
+                drawVectors();
+            } else {
+                card.classList.add('hidden');
+                btnText.innerText = "Show Solution";
+            }
+        }
+
+        function resetInputsAndFeedback() {
+            document.getElementById('inputMagnitude').value = '';
+            document.getElementById('inputAngle').value = '';
+            const selectEl = document.getElementById('cardinalSelect');
+            if (selectEl) selectEl.selectedIndex = 0;
+            document.getElementById('feedbackBox').classList.add('hidden');
+            resetFieldValidationStyles();
+            // FIX: always close the solution card. generateRandomVectors() clears
+            // state.showingSolution first, so the old toggle check never ran and the
+            // new problem's answer was left on screen.
+            state.showingSolution = false;
+            document.getElementById('solutionCard').classList.add('hidden');
+            document.getElementById('solutionBtnText').innerText = "Show Solution";
+        }
+
+        function toggleVectorsVisibility() {
+            state.vectorsVisible = !state.vectorsVisible;
+            updateViewVectorsButtonUI();
+            drawVectors();
+        }
+
+        function updateViewVectorsButtonUI() {
+            const visible = state.vectorsVisible;
+            const btnText = document.getElementById('canvasViewVectorsText');
+            const btnIcon = document.getElementById('canvasViewVectorsIcon');
+            const legend = document.getElementById('canvasLegend');
+            const headToTailContainer = document.getElementById('headToTailContainer');
+
+            if (btnText) btnText.innerText = visible ? 'Hide Vectors' : 'View Vectors';
+            if (btnIcon) btnIcon.className = visible ? 'fa-solid fa-eye-slash text-white' : 'fa-solid fa-eye text-white';
+            if (legend) legend.classList.toggle('hidden', !visible);
+            // Head-to-Tail button only appears once vectors are shown (same as the AP app)
+            if (headToTailContainer) {
+                headToTailContainer.classList.toggle('hidden', !visible);
+                headToTailContainer.classList.toggle('flex', visible);
+            }
+        }
+
+        function toggleHeadToTailMode() {
+            state.isHeadToTail = !state.isHeadToTail;
+            updateHeadToTailButtonUI();
+            drawVectors();
+        }
+
+        function updateHeadToTailButtonUI() {
+            const btnText = document.getElementById('headToTailText');
+            const btnIcon = document.getElementById('headToTailIcon');
+            if (!btnText) return;
+            if (state.isHeadToTail) {
+                btnText.innerText = 'Origin View';
+                if (btnIcon) btnIcon.className = 'fa-solid fa-arrows-to-dot text-white text-xs';
+            } else {
+                btnText.innerText = 'Head-to-Tail';
+                if (btnIcon) btnIcon.className = 'fa-solid fa-route text-white text-xs';
+            }
+        }
+
+        const canvas = document.getElementById('vectorCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            const rect = canvas.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = Math.round(rect.width * dpr);
+            canvas.height = Math.round(rect.height * dpr);
+            ctx.resetTransform();
+            ctx.scale(dpr, dpr);
+            drawVectors();
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+
+        function zoomIn() {
+            state.zoomLevel = Math.min(3.0, Number(((state.zoomLevel || 1.0) * 1.25).toFixed(3)));
+            drawVectors();
+        }
+
+        function zoomOut() {
+            state.zoomLevel = Math.max(0.4, Number(((state.zoomLevel || 1.0) / 1.25).toFixed(3)));
+            drawVectors();
+        }
+
+        function drawVectors() {
+            const rect = canvas.getBoundingClientRect();
+            const width = rect.width;
+            const height = rect.height;
+
+            if (width === 0 || height === 0) return;
+
+            // Clear background
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, width, height);
+
+            const originX = width / 2;
+            const originY = height / 2;
+
+            // Fixed isometric aspect ratio with dynamic zoom scaling
+            const minDim = Math.min(width, height);
+            const usableRadius = minDim * 0.43 * (state.zoomLevel || 1.0);
+            const scale = usableRadius / state.fixedGridMaxRange;
+
+            // Draw radial grid circles
+            ctx.strokeStyle = '#e2e8f0';
+            ctx.lineWidth = 1;
+
+            const step = state.fixedGridStep;
+            const maxR = Math.min(state.fixedGridMaxRange * 4, Math.max(state.fixedGridMaxRange, Math.ceil((minDim * 0.65) / scale / step) * step));
+
+            for (let r = step; r <= maxR; r += step) {
+                const screenR = r * scale;
+                ctx.beginPath();
+                ctx.arc(originX, originY, screenR, 0, 2 * Math.PI);
+                ctx.stroke();
+
+                if (originX + screenR + 24 < width) {
+                    ctx.fillStyle = '#64748b';
+                    ctx.font = '500 10px Inter, sans-serif';
+                    ctx.fillText(`${r}${state.unit}`, originX + screenR + 2, originY - 3);
+                }
+            }
+
+            // Draw primary coordinate axes
+            ctx.strokeStyle = '#94a3b8';
+            ctx.lineWidth = 1.5;
+            ctx.beginPath();
+            ctx.moveTo(10, originY);
+            ctx.lineTo(width - 10, originY);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(originX, 10);
+            ctx.lineTo(originX, height - 10);
+            ctx.stroke();
+
+            // Axis labels
+            ctx.fillStyle = '#475569';
+            ctx.font = 'bold 11px Inter, sans-serif';
+
+            if (state.question === 'q1') {
+                ctx.fillText('+x (0°)', width - 48, originY - 8);
+                ctx.fillText('-x (180°)', 10, originY - 8);
+                ctx.fillText('+y (90°)', originX + 8, 20);
+                ctx.fillText('-y (270°)', originX + 8, height - 12);
+            } else {
+                ctx.fillText('East (+x)', width - 54, originY - 8);
+                ctx.fillText('West (-x)', 10, originY - 8);
+                ctx.fillText('North (+y)', originX + 8, 20);
+                ctx.fillText('South (-y)', originX + 8, height - 12);
+            }
+
+            // Return early if student has vectors toggled off
+            if (!state.vectorsVisible) return;
+
+            const isHeadToTail = state.isHeadToTail;
+
+            const aRad = toRad(state.vecA.angle);
+            const aScreenDx = state.vecA.mag * Math.cos(aRad) * scale;
+            const aScreenDy = -state.vecA.mag * Math.sin(aRad) * scale;
+
+            const bRad = toRad(state.vecB.angle);
+            const bScreenDx = state.vecB.mag * Math.cos(bRad) * scale;
+            const bScreenDy = -state.vecB.mag * Math.sin(bRad) * scale;
+
+            // Draw Vector A (Deep Blue)
+            drawArrow(originX, originY, originX + aScreenDx, originY + aScreenDy, '#1d4ed8', 3.5, 'A');
+
+            if (state.vectorCount === 3) {
+                const cRad = toRad(state.vecC.angle);
+                const cScreenDx = state.vecC.mag * Math.cos(cRad) * scale;
+                const cScreenDy = -state.vecC.mag * Math.sin(cRad) * scale;
+
+                if (isHeadToTail) {
+                    const bTipX = originX + aScreenDx + bScreenDx;
+                    const bTipY = originY + aScreenDy + bScreenDy;
+                    drawArrow(originX + aScreenDx, originY + aScreenDy, bTipX, bTipY, '#d97706', 3, 'B');
+
+                    const cTipX = bTipX + cScreenDx;
+                    const cTipY = bTipY + cScreenDy;
+                    drawArrow(bTipX, bTipY, cTipX, cTipY, '#7e22ce', 3, 'C');
+                } else {
+                    drawArrow(originX, originY, originX + bScreenDx, originY + bScreenDy, '#d97706', 3, 'B');
+                    drawArrow(originX, originY, originX + cScreenDx, originY + cScreenDy, '#7e22ce', 3, 'C');
+                }
+
+                if (state.showResultantOnCanvas) {
+                    const rScreenDx = aScreenDx + bScreenDx + cScreenDx;
+                    const rScreenDy = aScreenDy + bScreenDy + cScreenDy;
+
+                    ctx.shadowColor = 'rgba(4, 120, 87, 0.35)';
+                    ctx.shadowBlur = 6;
+                    drawArrow(originX, originY, originX + rScreenDx, originY + rScreenDy, '#047857', 4, 'R');
+                    ctx.shadowBlur = 0;
+
+                    drawAngleArc(originX, originY, toRad(state.resultant.angleCCW), 32, '#047857');
+                }
+            } else {
+                if (isHeadToTail) {
+                    drawArrow(originX + aScreenDx, originY + aScreenDy, originX + aScreenDx + bScreenDx, originY + aScreenDy + bScreenDy, '#d97706', 3, 'B');
+                } else {
+                    drawArrow(originX, originY, originX + bScreenDx, originY + bScreenDy, '#d97706', 3, 'B');
+                }
+
+                if (state.showResultantOnCanvas) {
+                    const rScreenDx = aScreenDx + bScreenDx;
+                    const rScreenDy = aScreenDy + bScreenDy;
+
+                    ctx.shadowColor = 'rgba(4, 120, 87, 0.35)';
+                    ctx.shadowBlur = 6;
+                    drawArrow(originX, originY, originX + rScreenDx, originY + rScreenDy, '#047857', 4, 'R');
+                    ctx.shadowBlur = 0;
+
+                    drawAngleArc(originX, originY, toRad(state.resultant.angleCCW), 32, '#047857');
+                }
+            }
+        }
+
+        function drawArrow(fromX, fromY, toX, toY, color, width, label) {
+            const headLength = 12;
+            const dx = toX - fromX;
+            const dy = toY - fromY;
+            const angle = Math.atan2(dy, dx);
+            const length = Math.sqrt(dx * dx + dy * dy);
+
+            if (length < 2) return;
+
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = width;
+
+            ctx.beginPath();
+            ctx.moveTo(fromX, fromY);
+            ctx.lineTo(toX, toY);
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(toX, toY);
+            ctx.lineTo(toX - headLength * Math.cos(angle - Math.PI / 7), toY - headLength * Math.sin(angle - Math.PI / 7));
+            ctx.lineTo(toX - headLength * Math.cos(angle + Math.PI / 7), toY - headLength * Math.sin(angle + Math.PI / 7));
+            ctx.closePath();
+            ctx.fill();
+
+            if (label) {
+                const midX = fromX + dx * 0.55;
+                const midY = fromY + dy * 0.55;
+                const normalX = -Math.sin(angle) * 14;
+                const normalY = Math.cos(angle) * 14;
+
+                ctx.save();
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.arc(midX + normalX, midY + normalY, 9.5, 0, 2 * Math.PI);
+                ctx.fill();
+                ctx.strokeStyle = color;
+                ctx.lineWidth = 2;
+                ctx.stroke();
+
+                ctx.fillStyle = color;
+                ctx.font = 'bold 10px Inter, sans-serif';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'middle';
+                ctx.fillText(label, midX + normalX, midY + normalY + 0.5);
+                ctx.restore();
+            }
+        }
+
+        function drawAngleArc(ox, oy, targetRadCCW, radius, color) {
+            ctx.strokeStyle = color;
+            ctx.lineWidth = 1.5;
+            ctx.setLineDash([2, 2]);
+
+            ctx.beginPath();
+            ctx.arc(ox, oy, radius, 0, -targetRadCCW, true);
+            ctx.stroke();
+            ctx.setLineDash([]);
+        }
+
+        window.onload = function () {
+            showMainMenu();
+            if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => drawVectors());
+
+            ['inputMagnitude', 'inputAngle'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) {
+                    el.addEventListener('input', () => {
+                        const badge = id === 'inputMagnitude' ? document.getElementById('magFieldBadge') : document.getElementById('dirFieldBadge');
+                        if (badge && !badge.classList.contains('hidden')) {
+                            badge.classList.add('hidden');
+                        }
+                    });
+                }
+            });
+
+            const cardinalSelect = document.getElementById('cardinalSelect');
+            if (cardinalSelect) {
+                cardinalSelect.addEventListener('change', () => {
+                    cardinalSelect.classList.remove('border-emerald-500', 'bg-emerald-50/70', 'border-rose-500', 'bg-rose-50/70');
+                    cardinalSelect.classList.add('border-slate-300', 'bg-slate-50');
+                });
+            }
+        };
+    </script>
+</body>
+</html>
